@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Container from "@/components/layout/Container";
 
@@ -10,9 +13,29 @@ const navLinks = [
   { label: "Contact", href: "/contact" },
 ];
 
+const SCROLL_THRESHOLD = 20;
+
 export default function Navbar() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > SCROLL_THRESHOLD);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="fixed inset-x-0 top-0 z-50">
+    <header
+      className={`fixed inset-x-0 top-0 z-50 border-b transition-colors duration-300 ${
+        isScrolled
+          ? "border-foreground/10 bg-background/80 backdrop-blur-sm"
+          : "border-transparent bg-transparent"
+      }`}
+    >
       <Container>
         <div className="flex flex-wrap items-center justify-between gap-3 py-5">
           <Link
