@@ -58,7 +58,7 @@ export default function CurrentFocus() {
               Next Goal
             </p>
 
-            <p className="font-headline mt-4 text-xl font-normal leading-relaxed text-foreground">
+            <p className="mt-4 text-xl font-normal text-foreground">
               Tableau
             </p>
           </div>

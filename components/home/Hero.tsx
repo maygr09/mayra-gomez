@@ -1,4 +1,3 @@
-import Button from "@/components/ui/Button";
 import Container from "@/components/layout/Container";
 
 export default function Hero() {
@@ -32,10 +31,18 @@ export default function Hero() {
           problems.
         </p>
 
-        <div className="mt-14 flex justify-center gap-4">
-          <Button>View Projects</Button>
-          <Button>My Journey</Button>
-        </div>
+        <a
+          href="#projects"
+          className="group mt-10 inline-flex items-center gap-1 text-sm font-medium text-foreground transition-colors duration-200 hover:text-lavender-600"
+        >
+          Explore my work
+          <span
+            aria-hidden="true"
+            className="transition-transform duration-200 group-hover:translate-x-1"
+          >
+            →
+          </span>
+        </a>
       </Container>
     </section>
   );

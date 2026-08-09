@@ -9,11 +9,19 @@ const footerLinks = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-foreground/10 bg-background py-16 md:py-20">
+    <footer
+      id="contact"
+      className="border-t border-foreground/10 bg-background py-16 md:py-20"
+    >
       <Container>
         <div className="mx-auto max-w-xl text-center">
-          <p className="font-headline text-2xl text-lavender-600 md:text-3xl">
+          <p className="font-headline text-3xl text-lavender-600 md:text-5xl">
             Let&apos;s build something meaningful.
+          </p>
+
+          <p className="mt-10 text-sm leading-7 text-muted">
+            Whether you&apos;re interested in engineering, data, aviation or
+            interdisciplinary projects, I&apos;d love to hear from you.
           </p>
 
           <nav aria-label="Social" className="mt-8">
@@ -31,7 +39,9 @@ export default function Footer() {
             </ul>
           </nav>
 
-          <p className="mt-10 text-sm text-muted">
+          <p className="mt-10 text-sm text-muted">Currently based in Mexico.</p>
+
+          <p className="mt-2 text-sm text-muted">
             © {new Date().getFullYear()} Mayra R
           </p>
         </div>
