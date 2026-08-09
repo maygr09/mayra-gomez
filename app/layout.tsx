@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter, Parisienne } from "next/font/google";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 import "./globals.css";
 
 const inter = Inter({
@@ -30,10 +32,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${parisienne.variable} h-full antialiased`}
+      className={`${inter.variable} ${parisienne.variable} ${cormorant.variable} h-full antialiased`}
     >
       <body className="min-h-screen bg-background font sans text-foreground">
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

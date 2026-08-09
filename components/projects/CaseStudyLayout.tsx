@@ -1,5 +1,9 @@
 import Container from "@/components/layout/Container";
 import CaseStudySection from "@/components/projects/CaseStudySection";
+import ProjectOverview from "@/components/projects/ProjectOverview";
+import Prose from "@/components/projects/Prose";
+import BulletList from "@/components/projects/BulletList";
+import ArchitectureDiagram from "@/components/projects/ArchitectureDiagram";
 import type { CaseStudy } from "@/lib/case-studies";
 
 type CaseStudyLayoutProps = {
@@ -11,11 +15,12 @@ export default function CaseStudyLayout({ caseStudy }: CaseStudyLayoutProps) {
     name,
     tagline,
     summary,
+    overview,
     problem,
     challenge,
     solution,
     architecture,
-    techStack,
+    keyFeatures,
     lessonsLearned,
     futureImprovements,
     links,
@@ -40,32 +45,34 @@ export default function CaseStudyLayout({ caseStudy }: CaseStudyLayoutProps) {
       </header>
 
       <Container>
+        <ProjectOverview overview={overview} />
+
         <CaseStudySection title="The Problem">
-          <p>{problem}</p>
+          <Prose paragraphs={problem} />
         </CaseStudySection>
 
         <CaseStudySection title="The Challenge">
-          <p>{challenge}</p>
+          <Prose paragraphs={challenge} />
         </CaseStudySection>
 
         <CaseStudySection title="The Solution">
-          <p>{solution}</p>
+          <Prose paragraphs={solution} />
         </CaseStudySection>
 
         <CaseStudySection title="Architecture">
-          <p>{architecture}</p>
+          <ArchitectureDiagram layers={architecture} />
         </CaseStudySection>
 
-        <CaseStudySection title="Tech Stack">
-          <p>{techStack.join(" · ")}</p>
+        <CaseStudySection title="Key Features">
+          <BulletList items={keyFeatures} columns={2} />
         </CaseStudySection>
 
         <CaseStudySection title="Lessons Learned">
-          <p>{lessonsLearned}</p>
+          <BulletList items={lessonsLearned} />
         </CaseStudySection>
 
         <CaseStudySection title="Future Improvements">
-          <p>{futureImprovements}</p>
+          <BulletList items={futureImprovements} />
         </CaseStudySection>
 
         <CaseStudySection title="Links">
