@@ -34,6 +34,6 @@ export const projects: Project[] = [
     tagline: "Organizing financial decisions.",
     description:
       "A personal finance dashboard that turns raw transactions into clear categories and trends, built for clarity, not just tracking.",
-    href: "/projects/personal-finance-system",
+    href: "/projects/financial-system",
   },
 ];

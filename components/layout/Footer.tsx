@@ -2,8 +2,8 @@ import Container from "@/components/layout/Container";
 
 // TODO: replace with real profile URLs
 const footerLinks = [
-  { label: "GitHub", href: "#" },
-  { label: "LinkedIn", href: "#" },
+  { label: "GitHub", href: "https://github.com/maygr09" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/mayragr9/" },
   { label: "Email", href: "mailto:cnm.mayragomez@gmail.com" },
 ];
 

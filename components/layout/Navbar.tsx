@@ -5,7 +5,7 @@ import Link from "next/link";
 import Container from "@/components/layout/Container";
 
 const navLinks = [
-  { label: "Projects", href: "/projects" },
+  { label: "Projects", href: "/#projects" },
   { label: "Journal", href: "/journal" },
   { label: "Data Lab", href: "/data-lab" },
   { label: "My Journey", href: "/my-journey" },
