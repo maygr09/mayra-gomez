@@ -21,7 +21,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </p>
 
         <span className="mt-6 inline-flex items-center gap-1 text-sm font-medium text-foreground transition-colors duration-200 group-hover:text-lavender-600">
-          Read Case Study
+          Explore Case Study
           <span
             aria-hidden="true"
             className="transition-transform duration-200 group-hover:translate-x-1"
