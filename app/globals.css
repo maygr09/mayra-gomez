@@ -36,3 +36,23 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
 }
+
+/*
+ * Ambient watercolor wash. Sections paint their own opaque bg-background,
+ * so this lives as a fixed overlay above the content (not behind it) —
+ * otherwise it would be completely hidden. pointer-events: none keeps it
+ * from blocking any interaction. Softness comes from each gradient's own
+ * fade to transparent, not from a global opacity (that made it invisible).
+ */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-image:
+    radial-gradient(ellipse 85% 75% at 8% 4%, var(--lavender-100) 0%, transparent 62%),
+    radial-gradient(ellipse 90% 80% at 94% 98%, var(--lavender-50) 0%, transparent 65%),
+    radial-gradient(ellipse 65% 80% at 100% 32%, var(--lavender-200) 0%, transparent 58%);
+}
