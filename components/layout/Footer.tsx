@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <footer
       id="contact"
-      className="border-t border-foreground/10 bg-background py-16 md:py-20"
+      className="border-t border-foreground/10 py-16 md:py-20"
     >
       <Container>
         <div className="mx-auto max-w-xl text-center">

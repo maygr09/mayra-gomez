@@ -7,7 +7,7 @@ export default function CurrentFocus() {
     <section
       id="current-focus"
       aria-labelledby="current-focus-heading"
-      className="bg-background py-24 md:py-32"
+      className="py-24 md:py-32"
     >
       <Container>
         <div className="max-w-2xl">

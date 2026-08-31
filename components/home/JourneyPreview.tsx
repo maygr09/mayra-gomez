@@ -6,7 +6,7 @@ export default function JourneyPreview() {
     <section
       id="journey"
       aria-labelledby="journey-heading"
-      className="bg-background py-24 md:py-32"
+      className="py-24 md:py-32"
     >
       <Container>
         <div className="max-w-2xl">

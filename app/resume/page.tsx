@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function ResumePage() {
   return (
-    <article className="bg-background">
+    <article>
       <ResumeHero />
 
       <Container>

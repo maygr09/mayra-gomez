@@ -33,7 +33,7 @@ export default function CaseStudyLayout({ caseStudy }: CaseStudyLayoutProps) {
   } = caseStudy;
 
   return (
-    <article className="bg-background">
+    <article>
       <header className="py-24 md:py-32">
         <Container>
           <div className="max-w-2xl">

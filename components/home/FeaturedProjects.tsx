@@ -7,7 +7,7 @@ export default function FeaturedProjects() {
     <section
       id="projects"
       aria-labelledby="featured-projects-heading"
-      className="bg-background py-24 md:py-32"
+      className="py-24 md:py-32"
     >
       <Container>
         <div className="max-w-2xl">

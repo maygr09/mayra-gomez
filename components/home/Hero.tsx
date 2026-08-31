@@ -5,7 +5,7 @@ export default function Hero() {
     <section
       id="home"
       aria-labelledby="hero-heading"
-      className="flex min-h-screen items-center bg-background"
+      className="flex min-h-screen items-center"
     >
       <Container className="text-center">
         <p className="text-xs font-medium uppercase tracking-[0.35em] text-lavender-600">

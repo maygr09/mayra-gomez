@@ -34,7 +34,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${inter.variable} ${parisienne.variable} ${cormorant.variable} h-full antialiased`}
     >
-      <body className="min-h-screen bg-background font sans text-foreground">
+      <body className="min-h-screen font-sans text-foreground">
         <Navbar />
         {children}
         <Footer />
