@@ -5,7 +5,8 @@ type ProjectOverviewProps = {
 };
 
 export default function ProjectOverview({ overview }: ProjectOverviewProps) {
-  const { timeline, role, status, technologies, githubUrl } = overview;
+  const { timeline, role, status, technologies, githubUrl, liveUrl } =
+    overview;
 
   return (
     <section
@@ -48,6 +49,26 @@ export default function ProjectOverview({ overview }: ProjectOverviewProps) {
                 className="group inline-flex items-center gap-1 text-foreground transition-colors duration-200 hover:text-lavender-600"
               >
                 View Repository
+                <span
+                  aria-hidden="true"
+                  className="transition-transform duration-200 group-hover:translate-x-1"
+                >
+                  →
+                </span>
+              </a>
+            </dd>
+          </div>
+        )}
+
+        {liveUrl && (
+          <div>
+            <dt className="text-sm text-muted">Live Site</dt>
+            <dd className="mt-2 text-base">
+              <a
+                href={liveUrl}
+                className="group inline-flex items-center gap-1 text-foreground transition-colors duration-200 hover:text-lavender-600"
+              >
+                Visit Site
                 <span
                   aria-hidden="true"
                   className="transition-transform duration-200 group-hover:translate-x-1"

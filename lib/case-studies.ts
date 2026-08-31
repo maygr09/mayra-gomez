@@ -9,6 +9,7 @@ export type ProjectOverview = {
   status: string;
   technologies: string[];
   githubUrl?: string;
+  liveUrl?: string;
 };
 
 export type TechGroup = {
@@ -53,6 +54,7 @@ export const personalLibraryCaseStudy: CaseStudy = {
     status: "Completed",
     technologies: ["React", "Vite", "Express", "PostgreSQL"],
     githubUrl: "https://github.com/maygr09/Personal-library",
+    liveUrl: "https://personal-library-gold.vercel.app"
   },
 
   problem: [
