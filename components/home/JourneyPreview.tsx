@@ -11,9 +11,9 @@ export default function JourneyPreview() {
     >
       <Container>
         <div className="grid grid-cols-1 items-start gap-y-8 md:grid-cols-[auto_1fr] md:gap-x-[2cm] md:gap-y-0">
-          <div className="relative mx-auto aspect-[1168/1346] w-[275px] md:mx-0 md:w-[325px]">
+          <div className="relative mx-auto aspect-[1161/1355] w-[275px] md:mx-0 md:w-[325px]">
             <Image
-              src="/images/my-journey.png"
+              src="/images/my-journey-lavender.png"
               alt="Portrait of Mayra Gomez"
               fill
               sizes="(min-width: 768px) 325px, 275px"
