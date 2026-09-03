@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import Container from "@/components/layout/Container";
 
@@ -9,33 +10,46 @@ export default function JourneyPreview() {
       className="py-24 md:py-32"
     >
       <Container>
-        <div className="max-w-2xl">
-          <h2
-            id="journey-heading"
-            className="font-headline text-3xl text-foreground md:text-4xl"
-          >
-            My Journey
-          </h2>
-
-          <div className="mt-8 space-y-2 text-lg leading-8 text-muted">
-            <p>Engineering taught me how to solve problems.</p>
-            <p>Music taught me how to communicate them.</p>
-            <p>Aviation taught me how complex systems work.</p>
-            <p>These experiences shaped the way I design technology today.</p>
+        <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-16">
+          <div className="relative mx-auto aspect-[1168/1346] w-full max-w-sm md:max-w-none">
+            <Image
+              src="/images/my-journey.png"
+              alt="Portrait of Mayra Gomez"
+              fill
+              sizes="(min-width: 768px) 40vw, 80vw"
+              className="object-contain"
+              priority
+            />
           </div>
 
-          <Link
-            href="/my-journey"
-            className="group mt-10 inline-flex items-center gap-1 text-sm font-medium text-foreground transition-colors duration-200 hover:text-lavender-600"
-          >
-            Read My Journey
-            <span
-              aria-hidden="true"
-              className="transition-transform duration-200 group-hover:translate-x-1"
+          <div className="max-w-2xl">
+            <h2
+              id="journey-heading"
+              className="font-headline text-3xl text-foreground md:text-4xl"
             >
-              →
-            </span>
-          </Link>
+              My Journey
+            </h2>
+
+            <div className="mt-8 space-y-2 text-lg leading-8 text-muted">
+              <p>Engineering taught me how to solve problems.</p>
+              <p>Music taught me how to communicate them.</p>
+              <p>Aviation taught me how complex systems work.</p>
+              <p>These experiences shaped the way I design technology today.</p>
+            </div>
+
+            <Link
+              href="/my-journey"
+              className="group mt-10 inline-flex items-center gap-1 text-sm font-medium text-foreground transition-colors duration-200 hover:text-lavender-600"
+            >
+              Read My Journey
+              <span
+                aria-hidden="true"
+                className="transition-transform duration-200 group-hover:translate-x-1"
+              >
+                →
+              </span>
+            </Link>
+          </div>
         </div>
       </Container>
     </section>

@@ -196,7 +196,7 @@ export const crewExpenseManagementCaseStudy: CaseStudy = {
     "A full-stack application designed to automate airline crew expense calculations by transforming complex company policies into reliable and scalable software.",
 
   overview: {
-    timeline: "52 weeks",
+    timeline: "54 weeks",
     role: "Full Stack Developer",
     status: "Developing",
     technologies: ["React", "Vite", "JavaScript", "CSS", "Node.js", "Express REST API", "PostgreSQL", "Relactional Database Design", "SQL", "Rule-based calculations", "Business logic implementation", "Financial modeling", "Relational data modeling", "Scalable architecture design"],
@@ -274,7 +274,7 @@ export const financialSystemCaseStudy: CaseStudy = {
     "A personal finance platform designed to centralize financial information, transform scattered accounts into meaningful insights, and make everyday financial decisions easier to understand.",
 
   overview: {
-    timeline: "2 weeks",
+    timeline: "4 weeks",
     role: "Product Designer & Data Analyst",
     status: "Developing",
     technologies: ["Google Sheets", "Financial Modeling"],
