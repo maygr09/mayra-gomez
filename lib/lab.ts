@@ -3,7 +3,8 @@ export type LabProject = {
   status: string;
   description: string;
   tags: string[];
-  logHref: string;
+  linkLabel: string;
+  linkHref: string;
 };
 
 export const labProjects: LabProject[] = [
@@ -20,6 +21,23 @@ export const labProjects: LabProject[] = [
       "Accessibility",
       "SEO",
     ],
-    logHref: "https://github.com/maygr09/mayra-gomez",
+    linkLabel: "Development Log",
+    linkHref: "https://github.com/maygr09/mayra-gomez",
+  },
+  {
+    title: "Birthday Concert Gift",
+    status: "Completed",
+    description:
+      "Designed and developed an interactive digital birthday card that reveals a surprise concert gift through a small web experience. Built as a static website and deployed with GitHub Pages, focusing on animation, storytelling and responsive design.",
+    tags: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "GitHub Pages",
+      "Responsive Design",
+      "UI Animation",
+    ],
+    linkLabel: "View Project",
+    linkHref: "https://maygr09.github.io/birthday-concert-gift",
   },
 ];

@@ -6,7 +6,7 @@ type LabCardProps = {
 };
 
 export default function LabCard({ project }: LabCardProps) {
-  const { title, status, description, tags, logHref } = project;
+  const { title, status, description, tags, linkLabel, linkHref } = project;
 
   return (
     <article className="flex flex-col justify-between border border-foreground/10 p-8 transition-colors duration-300 hover:border-lavender-400 hover:bg-lavender-50/40">
@@ -35,7 +35,7 @@ export default function LabCard({ project }: LabCardProps) {
       </div>
 
       <div className="mt-8">
-        <Button href={logHref}>Development Log</Button>
+        <Button href={linkHref}>{linkLabel}</Button>
       </div>
     </article>
   );
