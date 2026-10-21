@@ -10,7 +10,7 @@ export type JournalEntry = {
 export const journalEntries: JournalEntry[] = [
   {
     slug: "F-R-M-S",
-    date: "August 2026",
+    date: "October 2026",
     title: "A Case of study: From Fatigue Risk Management to Human-Centred Aviation Scheduling",
     excerpt:
       "A data-driven examination of the gap between regulatory fatigue management practices and the broader factors shaping crew wellbeing. Scholar purposes",
