@@ -70,6 +70,13 @@ export default async function JournalEntryPage({
         <div className="mt-8 text-base leading-7 text-muted">
           <Prose paragraphs={entry.content} />
         </div>
+
+        <footer className="mt-12 border-t border-foreground/10 pt-6">
+          <p className="text-sm text-muted">Written by</p>
+          <p className="font-display mt-1 text-3xl text-lavender-600">
+            M. Gomez
+          </p>
+        </footer>
       </Container>
     </article>
   );
