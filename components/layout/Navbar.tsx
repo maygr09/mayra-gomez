@@ -7,6 +7,7 @@ import Container from "@/components/layout/Container";
 const navLinks = [
   { label: "Projects", href: "/#projects" },
   { label: "Lab", href: "/lab" },
+  { label: "Creator", href: "/creator" },
   { label: "Journal", href: "/journal" },
   { label: "My Journey", href: "/my-journey" },
   { label: "Resume", href: "/resume" },
