@@ -1,5 +1,4 @@
-// Placeholder content for the Creator mini-site. Replace values freely;
-// pages render whatever is in these arrays.
+// Placeholder content for the Creator mini-site.
 
 export type CreatorStat = {
   label: string;
@@ -43,14 +42,13 @@ export type Service = {
 export const creatorIntro = {
   headline: "Content that turns attention into action.",
   subline:
-    "Placeholder: one line on your niche and who you create for.",
-  niches: ["Placeholder niche 1", "Placeholder niche 2", "Placeholder niche 3"],
+    "Helping brands connect with real audience.",
+  niches: ["Apps", "Lifestyle", "Travel", "Beauty & Wellness"],
 };
 
 export const creatorStats: CreatorStat[] = [
   { label: "Total followers", value: "00K" },
   { label: "Avg. views per video", value: "00K" },
-  { label: "Engagement rate", value: "0.0%" },
   { label: "Brand collabs", value: "00" },
 ];
 
@@ -64,19 +62,13 @@ export const whatBrandsGet: string[] = [
 export const platforms: Platform[] = [
   {
     name: "Instagram",
-    handle: "@placeholder",
+    handle: "@maygr.creates",
     followers: "00K",
     href: "#",
   },
   {
     name: "TikTok",
-    handle: "@placeholder",
-    followers: "00K",
-    href: "#",
-  },
-  {
-    name: "YouTube",
-    handle: "@placeholder",
+    handle: "@maygr.creates",
     followers: "00K",
     href: "#",
   },
