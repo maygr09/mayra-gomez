@@ -72,7 +72,7 @@ export const journalEntries: JournalEntry[] = [
       "15. Scott, W. (1910). Waverley: Hace sesenta años (F. Gutiérrez-Brito & I. López Lapuya, Trads.). Biblioteca Virtual Miguel de Cervantes. https://www.cervantesvirtual.com/obra-visor/waverley--hace-sesenta-aos-de-walter-scott-en-la-traduccin-de-francisco-gutirrezbrito-e-isidoro-lpez-lapuya-sa-1910-0/html/01d5d146-82b2-11df-acc7-002185ce6064_3.html",
       "16. Scottish Archaeological Research Framework. (n. d.). 2.4 The Highland Lowland divide: Clans and kinship across the social spectrum. https://scarf.scot/national/medieval/2-from-north-britain-to-the-idea-of-scotland-tribes-kingdoms-states/2-4-the-highland-lowland-divide-clans-and-kinship-across-the-social-spectrum/",
       "17. Scottish History Society. (2023, November 1st). Dress Act 1746. https://www.scottishhistory.org/resources/dress-act-1746/",
-      "18. The National Archives. (s. f.). Jacobite timeline: Timeline of key events during the Jacobite rebellions [Timeline]. https://cdn.nationalarchives.gov.uk/documents/education/timeline-final.pdf",
+      "18. The National Archives. (n. d.). Jacobite timeline: Timeline of key events during the Jacobite rebellions [Timeline]. https://cdn.nationalarchives.gov.uk/documents/education/timeline-final.pdf",
       "19. VisitScotland. (n. d.). ¿Qué fue la rebelión jacobita? https://www.visitscotland.com/es-es/things-to-do/attractions/historic/jacobites",
       "20. Whitaker, J. (2026). The battle of Culloden: The last dynastic war on British soil. Sable House.",
     ],
