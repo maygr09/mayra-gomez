@@ -39,6 +39,81 @@ export type Service = {
   startingAt: string;
 };
 
+export type VideoExample = {
+  title: string;
+  // Local file in /public (e.g. "/videos/creator/app-1.mp4"). Optional.
+  src?: string;
+  // Still image shown before the video loads. Optional.
+  poster?: string;
+  // Link to the original post on Instagram / TikTok / YouTube. Optional.
+  href?: string;
+  platform?: string;
+};
+
+export type ExampleSection = {
+  industry: string;
+  description: string;
+  videos: VideoExample[];
+};
+
+export type CreatorPhoto = {
+  alt: string;
+  // Local file in /public (e.g. "/images/creator/about-1.jpg"). Optional.
+  src?: string;
+};
+
+// Two hero photos, shown side by side with a wavy right edge.
+export const creatorHeroPhotos: CreatorPhoto[] = [
+  { alt: "Portrait of Mayra Gomez" },
+  { alt: "Mayra creating content" },
+];
+
+export const creatorAbout = {
+  heading: "About me",
+  paragraphs: [
+    "Placeholder: who you are as a creator, in one or two short sentences.",
+    "Placeholder: what you make and who it is for.",
+  ],
+  facts: [
+    "Placeholder: a concrete fact (e.g. 40+ videos published)",
+    "Placeholder: a concrete fact (e.g. based in Mexico, creating in English and Spanish)",
+    "Placeholder: a concrete fact (e.g. background in software and aviation)",
+  ],
+};
+
+// Visibility switches. Hidden sections keep all their code and data; flip a
+// value to `true` when you have real content for it.
+export const creatorVisibility = {
+  homeStats: false,
+  work: false,
+  mediaKitNumbers: false,
+  mediaKitAudience: false,
+};
+
+// Start with one example per section. Add more objects to `videos` and the
+// row turns into a carousel automatically.
+const placeholderVideos = (industry: string): VideoExample[] => [
+  { title: `${industry} example 1` },
+];
+
+export const exampleSections: ExampleSection[] = [
+  {
+    industry: "Apps",
+    description: "Placeholder: one line on the kind of app content you make.",
+    videos: placeholderVideos("Apps"),
+  },
+  {
+    industry: "Travel & Lifestyle",
+    description: "Placeholder: one line on the kind of travel content you make.",
+    videos: placeholderVideos("Travel"),
+  },
+  {
+    industry: "Beauty & Wellness",
+    description: "Placeholder: one line on the kind of beauty content you make.",
+    videos: placeholderVideos("Beauty"),
+  },
+];
+
 export const creatorIntro = {
   headline: "Content that turns attention into action.",
   subline:
@@ -63,14 +138,14 @@ export const platforms: Platform[] = [
   {
     name: "Instagram",
     handle: "@maygr.creates",
-    followers: "00K",
-    href: "#",
+    followers: "",
+    href: "https://www.instagram.com/maygr.creates",
   },
   {
     name: "TikTok",
     handle: "@maygr.creates",
-    followers: "00K",
-    href: "#",
+    followers: "",
+    href: "https://www.tiktok.com/@maygr.creates",
   },
 ];
 

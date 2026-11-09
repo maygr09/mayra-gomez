@@ -10,7 +10,11 @@ export default function StatGrid({ stats, size = "lg" }: StatGridProps) {
     size === "lg" ? "text-4xl md:text-5xl" : "text-2xl md:text-3xl";
 
   return (
-    <dl className="grid grid-cols-2 gap-x-8 gap-y-10 md:grid-cols-4">
+    <dl
+      className={`grid grid-cols-2 gap-x-8 gap-y-10 ${
+        stats.length === 3 ? "md:grid-cols-3" : "md:grid-cols-4"
+      }`}
+    >
       {stats.map((stat) => (
         <div key={stat.label}>
           <dt className="text-sm font-medium uppercase tracking-[0.2em] text-lavender-600">

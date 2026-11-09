@@ -9,13 +9,12 @@ export const metadata: Metadata = {
   description: "How to start a collaboration: send a brief, get a reply in 48 hours.",
 };
 
-const EMAIL = "cnm.mayragomez@gmail.com";
+const EMAIL = "mayara.masenswan@gmail.com";
 const SUBJECT = "Collaboration brief";
 const BODY = [
   "Brand:",
   "Goal:",
   "Deliverables:",
-  "Budget:",
   "Timeline:",
 ].join("\n");
 
@@ -41,7 +40,7 @@ export default function CreatorContactPage() {
           </a>
           <p className="mt-4 text-sm text-muted">
             Opens your email with a ready-to-fill template: brand, goal,
-            deliverables, budget, timeline.
+            deliverables, timeline.
           </p>
         </section>
 

@@ -7,7 +7,7 @@ import StatGrid from "@/components/creator/StatGrid";
 import VideoEmbed from "@/components/creator/VideoEmbed";
 import ArrowLink from "@/components/ui/ArrowLink";
 import Button from "@/components/ui/Button";
-import { collaborations } from "@/lib/creator";
+import { collaborations, creatorVisibility } from "@/lib/creator";
 
 type CollabPageProps = {
   params: Promise<{ slug: string }>;
@@ -39,7 +39,7 @@ export default async function CollabPage({ params }: CollabPageProps) {
   const { slug } = await params;
   const collab = getCollab(slug);
 
-  if (!collab) notFound();
+  if (!creatorVisibility.work || !collab) notFound();
 
   const { brand, title, year, category, goal, deliverables, results, testimonial } =
     collab;

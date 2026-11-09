@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import Container from "@/components/layout/Container";
 import CollabCard from "@/components/creator/CollabCard";
 import CreatorPageHeader from "@/components/creator/CreatorPageHeader";
-import { collaborations } from "@/lib/creator";
+import { collaborations, creatorVisibility } from "@/lib/creator";
 
 export const metadata: Metadata = {
   title: "Work — Creator — Mayra Gomez",
@@ -10,6 +11,8 @@ export const metadata: Metadata = {
 };
 
 export default function CreatorWorkPage() {
+  if (!creatorVisibility.work) notFound();
+
   return (
     <>
       <CreatorPageHeader

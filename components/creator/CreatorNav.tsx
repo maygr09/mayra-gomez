@@ -3,13 +3,14 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Container from "@/components/layout/Container";
+import { creatorVisibility } from "@/lib/creator";
 
 const links = [
-  { label: "Home", href: "/creator" },
-  { label: "Work", href: "/creator/work" },
-  { label: "Media Kit", href: "/creator/media-kit" },
-  { label: "Contact", href: "/creator/contact" },
-];
+  { label: "Home", href: "/creator", visible: true },
+  { label: "Work", href: "/creator/work", visible: creatorVisibility.work },
+  { label: "Media Kit", href: "/creator/media-kit", visible: true },
+  { label: "Contact", href: "/creator/contact", visible: true },
+].filter((link) => link.visible);
 
 export default function CreatorNav() {
   const pathname = usePathname();

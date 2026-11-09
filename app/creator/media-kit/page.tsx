@@ -9,6 +9,7 @@ import Button from "@/components/ui/Button";
 import {
   audienceFacts,
   creatorStats,
+  creatorVisibility,
   platforms,
   services,
 } from "@/lib/creator";
@@ -27,9 +28,11 @@ export default function MediaKitPage() {
       />
 
       <Container>
-        <CaseStudySection title="Numbers">
-          <StatGrid stats={creatorStats} size="md" />
-        </CaseStudySection>
+        {creatorVisibility.mediaKitNumbers && (
+          <CaseStudySection title="Numbers">
+            <StatGrid stats={creatorStats} size="md" />
+          </CaseStudySection>
+        )}
 
         <CaseStudySection title="Platforms">
           <ul>
@@ -51,9 +54,11 @@ export default function MediaKitPage() {
           </ul>
         </CaseStudySection>
 
-        <CaseStudySection title="Audience">
-          <StatGrid stats={audienceFacts} size="md" />
-        </CaseStudySection>
+        {creatorVisibility.mediaKitAudience && (
+          <CaseStudySection title="Audience">
+            <StatGrid stats={audienceFacts} size="md" />
+          </CaseStudySection>
+        )}
 
         <CaseStudySection title="Services & rates">
           <ul className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8">
