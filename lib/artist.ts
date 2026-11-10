@@ -1,5 +1,5 @@
 // Content for the Artist section. Everything on /artist and /artist/[slug]
-// renders from this file. Dates and placeholder media are examples:
+// renders from this file.
 // replace them with the real ones.
 
 export type ArtistCategory =
@@ -66,7 +66,15 @@ export type ArtistProject = {
   featured?: boolean;
 };
 
+// Shown under the dimensions in the Artist hero. Replace "#" with the
+// profile URL, e.g. "https://www.instagram.com/usuario".
+export const coversInstagram = {
+  label: "Covers on Instagram",
+  href: "https://www.instagram.com/mayragsinger/",
+};
+
 export const artistIntro = {
+  portrait: { alt: "Mayra Gomez, the artist behind the work", src: "/images/my-journey-lavender.png" } as ArtistImage,
   statementLabel: "The artist behind the work",
   statement: [
     "I'm a multidisciplinary artist with a background in music and performing arts, constantly exploring new forms of creative expression.",
@@ -128,7 +136,7 @@ export const artistProjects: ArtistProject[] = [
     story: [
       "My final conservatory evaluation took place during the pandemic, when traditional performances were no longer possible. Instead, I had the opportunity to record my performance on video. What could have felt like a limitation became a meaningful experience, reminding me that artistic expression can adapt, evolve, and find its way beyond the stage.",
     ],
-    cover: { alt: "Conservatory final performance" },
+    cover: { alt: "Conservatory final performance", src: "/images/artist/conservatory.png" },
     media: [
       {
         type: "youtube",
@@ -163,18 +171,28 @@ export const artistProjects: ArtistProject[] = [
     title: "El amor de mi vida",
     category: "writing",
     date: "2016-06",
-    summary: "Original short story published on Wattpad, inspired by a writing class.",
-    cover: { alt: "Placeholder Story cover" },
+    summary: "Original short story published on Wattpad, inspired by a writing class. FanFiction of Jelsa (Spanish).",
+    cover: { alt: "El amor de mi vida cover", src: "/images/artist/wattpad-one-shot.png" },
     media: [],
     externalLink: { label: "Read on Wattpad", href: "https://www.wattpad.com/272732443-el-amor-de-mi-vida-one-shot-jelsa-capítulo-único" },
   },
   {
-    slug: "placeholder-textile-piece",
-    title: "Placeholder Textile Piece",
+    slug: "eco-de-la-magia",
+    title: "El eco oculto de la magia",
+    category: "writing",
+    date: "2026-11",
+    summary: "Original historic novel, inspired by fictional characters (Spanish). Overview published on Wattpad.",
+    cover: { alt: "El eco oculto de la magia cover", src: "/images/artist/Portada_Eco_Magia.png" },
+    media: [],
+    externalLink: { label: "Read on Wattpad", href: "https://www.wattpad.com/story/96493696-el-eco-oculto-de-la-magia" },
+  },
+  {
+    slug: "pumpkin-coster",
+    title: "Pumpkin Costers",
     category: "textile",
-    date: "2022-02",
-    summary: "Placeholder: one line on the piece and its technique.",
-    cover: { alt: "Placeholder textile piece" },
+    date: "2026-10",
+    summary: "Crocheted pumpkin coasters, made with cotton yarn and a simple pattern. A cozy addition to any autumn table setting.",
+    cover: { alt: "Pumpkin Costers", src: "/images/artist/pumpkin-coasters.png" },
     media: [
       ...placeholderGallery("Textile piece"),
       { type: "video", title: "Textile piece, process" },

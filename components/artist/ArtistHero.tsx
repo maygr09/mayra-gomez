@@ -1,5 +1,7 @@
 import Container from "@/components/layout/Container";
 import DimensionIndex from "@/components/artist/DimensionIndex";
+import ArrowLink from "@/components/ui/ArrowLink";
+import { coversInstagram } from "@/lib/artist";
 
 export default function ArtistHero() {
   return (
@@ -15,6 +17,12 @@ export default function ArtistHero() {
           </p>
 
           <DimensionIndex />
+
+          <div className="mt-8">
+            <ArrowLink href={coversInstagram.href} external>
+              {coversInstagram.label}
+            </ArrowLink>
+          </div>
         </div>
       </Container>
     </header>
