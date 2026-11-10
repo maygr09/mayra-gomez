@@ -64,8 +64,8 @@ export type CreatorPhoto = {
 
 // Two hero photos, shown side by side with a wavy right edge.
 export const creatorHeroPhotos: CreatorPhoto[] = [
-  { alt: "Portrait of Mayra Gomez" },
-  { alt: "Mayra creating content" },
+  { alt: "Portrait of Mayra Gomez", src: "/images/my-journey-lavender.png" },
+  { alt: "Mayra creating content", src: "/images/creator/traveling-may.jpeg" },
 ];
 
 export const creatorAbout = {

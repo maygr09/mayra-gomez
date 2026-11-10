@@ -116,7 +116,7 @@ export const artistProjects: ArtistProject[] = [
     story: [
       "I originally auditioned hoping to play Nala, but the director saw something different in me. She believed there was a side of myself waiting to be set free, and that Rafiki was the perfect character to bring it out. Through this role, I discovered abilities and a confidence I hadn't fully recognized in myself.",
     ],
-    cover: { alt: "The Lion King, Rafiki on stage" },
+    cover: { alt: "The Lion King, Rafiki on stage", src: "/images/artist/lion-king.jpg" },
     media: [
       { type: "video", title: "The Lion King, performance excerpt" },
       ...placeholderGallery("The Lion King"),
@@ -156,11 +156,11 @@ export const artistProjects: ArtistProject[] = [
     skills: ["Aerial dance", "Vocal performance", "Ensemble"],
     featured: true,
     summary:
-      "Circus adaptation with aerial dance, a sung solo and demanding figures and drops.",
+      "Circus adaptation with aerial dance, a sung solo and demanding figures and drops at Teatro San Benito Abad.",
     story: [
       "Inspired by the story of Mulan, this production brought the narrative to life through circus performances. I participated in aerial dance and performed a song while other artists danced. Learning the aerial figures and drops was challenging, but seeing everything come together made the effort worthwhile. It was an experience that showed me what dedication and collaboration could achieve on stage.",
     ],
-    cover: { alt: "Mulan: A Circus Adaptation, aerial scene" },
+    cover: { alt: "Mulan: A Circus Adaptation, aerial scene", src: "/images/artist/mulan.png" },
     media: [
       { type: "video", title: "Mulan, aerial excerpt" },
       ...placeholderGallery("Mulan"),
@@ -188,24 +188,47 @@ export const artistProjects: ArtistProject[] = [
   },
   {
     slug: "pumpkin-coster",
-    title: "Pumpkin Costers",
+    title: "Pumpkin Coasters",
     category: "textile",
     date: "2026-10",
     summary: "Crocheted pumpkin coasters, made with cotton yarn and a simple pattern. A cozy addition to any autumn table setting.",
-    cover: { alt: "Pumpkin Costers", src: "/images/artist/pumpkin-coasters.png" },
+    cover: { alt: "Pumpkin Coasters", src: "/images/artist/pumpkin-coster.jpg" },
     media: [
       ...placeholderGallery("Textile piece"),
       { type: "video", title: "Textile piece, process" },
     ],
   },
   {
-    slug: "placeholder-rehearsal",
-    title: "Placeholder Rehearsal",
-    category: "music",
-    date: "2020-11",
-    summary: "Placeholder: one line on a rehearsal or recording session.",
-    cover: { alt: "Placeholder rehearsal" },
+    slug: "avatar",
+    title: "Dance Competition: Avatar",
+    category: "dance",
+    date: "2017-05",
+    summary: "Dance competition performance inspired by the movie Avatar, featuring acrobatic elements.",
+    cover: { alt: "Dance Competition: Avatar", src: "/images/artist/avatar.jpg" },
     media: [{ type: "video", title: "Rehearsal footage" }],
+  },
+  {
+    slug: "christmas-chorus",
+    title: "Chorus: Chistmas Concert",
+    category: "music",
+    date: "2017-12",
+    summary: "Chorus performance for a Christmas concert, showcasing vocal harmonies and festive arrangements at Chapultepec Castle and Vasconcelos Library.",
+    cover: { alt: "Chorus: Christmas Concert", src: "/images/artist/chorus-christmas.jpg" },
+    media: [{ type: "video", title: "Chapultepec Castle" }, { type: "video", title: "Vasconcelos Library" }],
+  },
+  {
+    slug: "forza-venite-gente",
+    title: "Forza Venite Gente - The Musical",
+    category: "theatre",
+    date: "2018-08",
+    role: "Clara of Assisi & Moon", 
+    summary:
+      "Independent theatrical production. The musical adaptation of the story of Saint Francis of Assisi, featuring a mix of acting, singing, and dancing.",
+    cover: { alt: "Moon in silks", src: "/images/artist/forza-moon.jpg" },
+    media: [
+      { type: "video", title: "Forza Venite Gente, performance excerpt" },
+      ...placeholderGallery("Forza Venite Gente"),
+    ],
   },
 ];
 

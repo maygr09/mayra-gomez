@@ -34,6 +34,7 @@ export default function ArtistStatement() {
             <CreatorPhotoFrame
               photo={artistIntro.portrait}
               bare
+              priority
               className="aspect-[4/5] max-w-sm md:ml-auto"
               sizes="(min-width: 768px) 30vw, 90vw"
             />
