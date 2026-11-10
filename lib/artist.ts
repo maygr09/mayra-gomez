@@ -141,9 +141,7 @@ export const artistProjects: ArtistProject[] = [
       {
         type: "youtube",
         title: "Conservatory final performance",
-        // Paste the embed link here, e.g.
-        // "https://www.youtube-nocookie.com/embed/VIDEO_ID"
-        embedUrl: undefined,
+        embedUrl: "https://www.youtube-nocookie.com/embed/vVUDOhwT0L4?si=L16UNaGg_pLxRxUG",
       },
     ],
   },
@@ -192,7 +190,7 @@ export const artistProjects: ArtistProject[] = [
     category: "textile",
     date: "2026-10",
     summary: "Crocheted pumpkin coasters, made with cotton yarn and a simple pattern. A cozy addition to any autumn table setting.",
-    cover: { alt: "Pumpkin Coasters", src: "/images/artist/pumpkin-coster.jpg" },
+    cover: { alt: "Pumpkin Coasters", src: "/images/artist/pumpkin-coster.jpeg" },
     media: [
       ...placeholderGallery("Textile piece"),
       { type: "video", title: "Textile piece, process" },
