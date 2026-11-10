@@ -7,6 +7,7 @@ type CreatorPhotoFrameProps = {
   priority?: boolean;
   // Organic, wavy right edge (needs <CreatorWaveDefs /> on the page).
   wavy?: boolean;
+  sizes?: string;
 };
 
 // Renders a real photo when `src` exists, otherwise a quiet placeholder.
@@ -16,6 +17,7 @@ export default function CreatorPhotoFrame({
   className = "aspect-[4/5]",
   priority = false,
   wavy = false,
+  sizes = "(min-width: 768px) 25vw, 45vw",
 }: CreatorPhotoFrameProps) {
   const { src, alt } = photo;
 
@@ -31,7 +33,7 @@ export default function CreatorPhotoFrame({
           src={src}
           alt={alt}
           fill
-          sizes="(min-width: 768px) 25vw, 45vw"
+          sizes={sizes}
           className="object-cover"
           priority={priority}
         />

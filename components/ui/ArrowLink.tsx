@@ -26,7 +26,12 @@ export default function ArrowLink({
 }: ArrowLinkProps) {
   if (external) {
     return (
-      <a href={href} className={className}>
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={className}
+      >
         {children}
         {arrow}
       </a>
