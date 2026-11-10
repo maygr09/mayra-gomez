@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Container from "@/components/layout/Container";
 
 const navLinks = [
@@ -21,6 +22,9 @@ const navLinkClassName =
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  // The Creator mini-site has its own navigation: here the main navbar
+  // shrinks to just the "M." logo that leads back to the main site.
+  const isCreator = usePathname().startsWith("/creator");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,25 +53,27 @@ export default function Navbar() {
             M.
           </Link>
 
-          <nav aria-label="Primary">
-            <ul className="flex flex-wrap items-center gap-x-8 gap-y-2 text-sm font-normal text-foreground">
-              {navLinks.map(({ label, href }) =>
-                href.startsWith("#") ? (
-                  <li key={href}>
-                    <a href={href} className={navLinkClassName}>
-                      {label}
-                    </a>
-                  </li>
-                ) : (
-                  <li key={href}>
-                    <Link href={href} className={navLinkClassName}>
-                      {label}
-                    </Link>
-                  </li>
-                ),
-              )}
-            </ul>
-          </nav>
+          {!isCreator && (
+            <nav aria-label="Primary">
+              <ul className="flex flex-wrap items-center gap-x-8 gap-y-2 text-sm font-normal text-foreground">
+                {navLinks.map(({ label, href }) =>
+                  href.startsWith("#") ? (
+                    <li key={href}>
+                      <a href={href} className={navLinkClassName}>
+                        {label}
+                      </a>
+                    </li>
+                  ) : (
+                    <li key={href}>
+                      <Link href={href} className={navLinkClassName}>
+                        {label}
+                      </Link>
+                    </li>
+                  ),
+                )}
+              </ul>
+            </nav>
+          )}
         </div>
       </Container>
     </header>
