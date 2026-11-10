@@ -4,6 +4,7 @@ import {
   categoryLabels,
   formatYear,
   mediaKinds,
+  opensExternally,
   type ArtistProject,
 } from "@/lib/artist";
 
@@ -11,15 +12,15 @@ type ArchiveCardProps = {
   project: ArtistProject;
 };
 
+const cardClassName =
+  "group flex h-full flex-col border border-foreground/10 p-5 transition-colors duration-300 hover:border-lavender-400 hover:bg-lavender-50/40";
+
 export default function ArchiveCard({ project }: ArchiveCardProps) {
-  const { slug, title, category, date, summary, cover } = project;
+  const { slug, title, category, date, summary, cover, externalLink } = project;
   const kinds = mediaKinds(project);
 
-  return (
-    <Link
-      href={`/artist/${slug}`}
-      className="group flex h-full flex-col border border-foreground/10 p-5 transition-colors duration-300 hover:border-lavender-400 hover:bg-lavender-50/40"
-    >
+  const content = (
+    <>
       <CreatorPhotoFrame
         photo={cover}
         className="aspect-[4/3]"
@@ -45,6 +46,27 @@ export default function ArchiveCard({ project }: ArchiveCardProps) {
           ))}
         </ul>
       )}
+    </>
+  );
+
+  // Writing goes straight to its external link, with no page in between.
+  if (opensExternally(project) && externalLink) {
+    return (
+      <a
+        href={externalLink.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`${title} (opens in a new tab)`}
+        className={cardClassName}
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <Link href={`/artist/${slug}`} className={cardClassName}>
+      {content}
     </Link>
   );
 }

@@ -69,8 +69,8 @@ export type ArtistProject = {
 export const artistIntro = {
   statementLabel: "The artist behind the work",
   statement: [
-    "Placeholder: one short sentence on who you are as an artist.",
-    "Placeholder: one short sentence on what drives your work.",
+    "I'm a multidisciplinary artist with a background in music and performing arts, constantly exploring new forms of creative expression.",
+    "Driven by curiosity and a love for storytelling, I see art as a way to discover, connect, and express what words alone cannot.",
   ],
 };
 
@@ -133,7 +133,7 @@ export const artistProjects: ArtistProject[] = [
       {
         type: "youtube",
         title: "Conservatory final performance",
-        // Paste your embed link here, e.g.
+        // Paste the embed link here, e.g.
         // "https://www.youtube-nocookie.com/embed/VIDEO_ID"
         embedUrl: undefined,
       },
@@ -159,14 +159,14 @@ export const artistProjects: ArtistProject[] = [
     ],
   },
   {
-    slug: "placeholder-story",
-    title: "Placeholder Story",
+    slug: "wattpad-one-shot",
+    title: "El amor de mi vida",
     category: "writing",
-    date: "2022-09",
-    summary: "Placeholder: one-line synopsis of a written work.",
+    date: "2016-06",
+    summary: "Original short story published on Wattpad, inspired by a writing class.",
     cover: { alt: "Placeholder Story cover" },
     media: [],
-    externalLink: { label: "Read on Wattpad", href: "#" },
+    externalLink: { label: "Read on Wattpad", href: "https://www.wattpad.com/272732443-el-amor-de-mi-vida-one-shot-jelsa-capítulo-único" },
   },
   {
     slug: "placeholder-textile-piece",
@@ -199,6 +199,12 @@ export const archiveProjects: ArtistProject[] = [...artistProjects].sort(
 export const selectedWorks: ArtistProject[] = artistProjects.filter(
   (project) => project.featured,
 );
+
+// Writing with an external link (e.g. Wattpad) goes straight to that link:
+// it has no detail page of its own.
+export function opensExternally(project: ArtistProject) {
+  return project.category === "writing" && Boolean(project.externalLink);
+}
 
 export function getProject(slug: string) {
   return artistProjects.find((project) => project.slug === slug);

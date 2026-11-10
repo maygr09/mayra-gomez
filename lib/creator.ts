@@ -71,13 +71,13 @@ export const creatorHeroPhotos: CreatorPhoto[] = [
 export const creatorAbout = {
   heading: "About me",
   paragraphs: [
-    "Placeholder: who you are as a creator, in one or two short sentences.",
-    "Placeholder: what you make and who it is for.",
+    "Hi, I'm May! A Mexico-based content creator with a background in software engineering and aviation, bringing a curious and practical perspective to digital storytelling.",
+    "I create authentic, relatable content around apps, travel, lifestyle, and beauty, helping brands showcase how their products fit naturally into everyday life.",
   ],
   facts: [
-    "Placeholder: a concrete fact (e.g. 40+ videos published)",
-    "Placeholder: a concrete fact (e.g. based in Mexico, creating in English and Spanish)",
-    "Placeholder: a concrete fact (e.g. background in software and aviation)",
+    "Creating content in English and Spanish.",
+    "Background in software engineering and commercial aviation.",
+    "Content focused on technology, travel, lifestyle, and beauty.",
   ],
 };
 
@@ -99,17 +99,17 @@ const placeholderVideos = (industry: string): VideoExample[] => [
 export const exampleSections: ExampleSection[] = [
   {
     industry: "Apps",
-    description: "Placeholder: one line on the kind of app content you make.",
+    description: "Making technology approachable through engaging app demonstrations, practical tutorials, and real-life use cases that highlight how digital tools can simplify everyday life.",
     videos: placeholderVideos("Apps"),
   },
   {
     industry: "Travel & Lifestyle",
-    description: "Placeholder: one line on the kind of travel content you make.",
+    description: "Sharing practical travel tips, useful discoveries, and everyday experiences through relatable storytelling, inspired by a life spent exploring new places.",
     videos: placeholderVideos("Travel"),
   },
   {
     industry: "Beauty & Wellness",
-    description: "Placeholder: one line on the kind of beauty content you make.",
+    description: "Creating honest, approachable beauty and self-care content focused on practical routines, product experiences, and simple ways to feel your best.",
     videos: placeholderVideos("Beauty"),
   },
 ];
@@ -128,10 +128,10 @@ export const creatorStats: CreatorStat[] = [
 ];
 
 export const whatBrandsGet: string[] = [
-  "Placeholder: a concrete deliverable (e.g. 1 Reel + 3 Stories)",
-  "Placeholder: a concrete outcome (e.g. brief to draft in 5 days)",
-  "Placeholder: usage rights and reporting included",
-  "Placeholder: performance report after publishing",
+  "Creative Deliverables: Short-form videos, product demonstrations, tutorials, voiceovers, and lifestyle content tailored to your campaign.",
+  "Clear Creative Process: From concept and scripting to filming and editing, with timelines agreed upon before production.",
+  "Usage & Licensing: Organic and paid usage options available, with licensing terms agreed upon for each collaboration.",  
+  "Performance Insights: Post-publication analytics available for content published on my own channels, where platform data is accessible.",
 ];
 
 export const platforms: Platform[] = [

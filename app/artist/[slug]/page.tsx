@@ -13,6 +13,7 @@ import {
   categoryLabels,
   formatYear,
   getProject,
+  opensExternally,
 } from "@/lib/artist";
 
 type ArtistProjectPageProps = {
@@ -20,7 +21,9 @@ type ArtistProjectPageProps = {
 };
 
 export function generateStaticParams() {
-  return artistProjects.map((project) => ({ slug: project.slug }));
+  return artistProjects
+    .filter((project) => !opensExternally(project))
+    .map((project) => ({ slug: project.slug }));
 }
 
 export async function generateMetadata({
@@ -43,7 +46,7 @@ export default async function ArtistProjectPage({
   const { slug } = await params;
   const project = getProject(slug);
 
-  if (!project) notFound();
+  if (!project || opensExternally(project)) notFound();
 
   const {
     title,
@@ -65,9 +68,11 @@ export default async function ArtistProjectPage({
   );
 
   // archiveProjects is newest first: the previous index is the newer project.
-  const index = archiveProjects.findIndex((p) => p.slug === slug);
-  const newer = index > 0 ? archiveProjects[index - 1] : undefined;
-  const older = archiveProjects[index + 1];
+  // Projects that open externally have no page, so they are skipped.
+  const pages = archiveProjects.filter((p) => !opensExternally(p));
+  const index = pages.findIndex((p) => p.slug === slug);
+  const newer = index > 0 ? pages[index - 1] : undefined;
+  const older = pages[index + 1];
 
   return (
     <article className="py-24 md:py-32">
