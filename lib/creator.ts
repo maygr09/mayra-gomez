@@ -110,7 +110,13 @@ export const exampleSections: ExampleSection[] = [
   {
     industry: "Beauty & Wellness",
     description: "Creating honest, approachable beauty and self-care content focused on practical routines, product experiences, and simple ways to feel your best.",
-    videos: placeholderVideos("Beauty"),
+    videos: [
+      {
+        title: "ISDIN",
+        src: "/videos/creator/isdin.mp4",
+        poster: "/videos/creator/isdin-poster.jpg",
+      },
+    ],
   },
 ];
 
