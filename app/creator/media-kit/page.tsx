@@ -43,9 +43,11 @@ export default function MediaKitPage() {
               >
                 <span className="text-foreground">{platform.name}</span>
                 <span className="text-sm text-muted">{platform.handle}</span>
-                <span className="font-headline text-xl text-foreground">
-                  {platform.followers}
-                </span>
+                {platform.followers && (
+                  <span className="font-headline text-xl text-foreground">
+                    {platform.followers}
+                  </span>
+                )}
                 <ArrowLink href={platform.href} external>
                   Visit
                 </ArrowLink>

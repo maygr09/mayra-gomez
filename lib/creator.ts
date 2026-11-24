@@ -125,6 +125,11 @@ export const creatorIntro = {
   subline:
     "Helping brands connect with real audience.",
   niches: ["Apps", "Lifestyle", "Travel", "Beauty & Wellness"],
+  // Quick facts shown in the hero. "00" is a placeholder: set your age.
+  facts: [
+    { label: "Age", value: "28" },
+    { label: "Languages", value: "Spanish · English" },
+  ] as CreatorStat[],
 };
 
 export const creatorStats: CreatorStat[] = [
@@ -171,7 +176,7 @@ export const services: Service[] = [
       "1 round of revisions",
     ],
     turnaround: "5 business days",
-    startingAt: "$000",
+    startingAt: "$20 USD",
   },
   {
     title: "Content package",

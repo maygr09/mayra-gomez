@@ -64,6 +64,19 @@ export default function CreatorHomePage() {
                 ))}
               </ul>
 
+              <dl className="mt-8 flex flex-wrap gap-x-10 gap-y-4">
+                {creatorIntro.facts.map((fact) => (
+                  <div key={fact.label}>
+                    <dt className="text-xs font-medium uppercase tracking-[0.2em] text-lavender-600">
+                      {fact.label}
+                    </dt>
+                    <dd className="font-headline mt-1 text-xl text-foreground">
+                      {fact.value}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+
               <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
                 <Button href="/creator/contact">Work with me</Button>
                 <ArrowLink href="/creator/media-kit">View media kit</ArrowLink>
