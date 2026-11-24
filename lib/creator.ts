@@ -186,7 +186,7 @@ export const services: Service[] = [
       "Performance report",
     ],
     turnaround: "10 business days",
-    startingAt: "$000",
+    startingAt: "$50 USD",
   },
   {
     title: "Ongoing partnership",
@@ -196,7 +196,7 @@ export const services: Service[] = [
       "Monthly report and call",
     ],
     turnaround: "Monthly",
-    startingAt: "$000 / mo",
+    startingAt: "$200 / mo",
   },
 ];
 
