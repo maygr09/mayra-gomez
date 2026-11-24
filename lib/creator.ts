@@ -196,7 +196,7 @@ export const services: Service[] = [
       "Monthly report and call",
     ],
     turnaround: "Monthly",
-    startingAt: "$200 / mo",
+    startingAt: "$200 USD / mo",
   },
 ];
 
