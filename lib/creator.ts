@@ -100,7 +100,13 @@ export const exampleSections: ExampleSection[] = [
   {
     industry: "Apps",
     description: "Making technology approachable through engaging app demonstrations, practical tutorials, and real-life use cases that highlight how digital tools can simplify everyday life.",
-    videos: placeholderVideos("Apps"),
+    videos: [
+      {
+        title: "ALTA",
+        src: "/videos/creator/Alta_final.MOV",
+        poster: "/videos/creator/alta-poster.png",
+      },
+    ],
   },
   {
     industry: "Travel & Lifestyle",
