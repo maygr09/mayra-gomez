@@ -48,6 +48,10 @@ export type VideoExample = {
   // Link to the original post on Instagram / TikTok / YouTube. Optional.
   href?: string;
   platform?: string;
+  // Spec sheet shown under the video. All optional.
+  format?: string;
+  language?: string;
+  type?: string;
 };
 
 export type ExampleSection = {
@@ -90,8 +94,6 @@ export const creatorVisibility = {
   mediaKitAudience: false,
 };
 
-// Start with one example per section. Add more objects to `videos` and the
-// row turns into a carousel automatically.
 const placeholderVideos = (industry: string): VideoExample[] => [
   { title: `${industry} example 1` },
 ];
@@ -105,13 +107,25 @@ export const exampleSections: ExampleSection[] = [
         title: "ALTA",
         src: "/videos/creator/Alta_final.MOV",
         poster: "/videos/creator/alta-poster.png",
+        format: "Problem-solution + app demo",
+        language: "Spanish",
+        type: "App showcase",
       },
     ],
   },
   {
     industry: "Travel & Lifestyle",
     description: "Sharing practical travel tips, useful discoveries, and everyday experiences through relatable storytelling, inspired by a life spent exploring new places.",
-    videos: placeholderVideos("Travel"),
+    videos: [
+      {
+        title: "THE CROOKED HOUSE",
+        src: "/videos/creator/the_crooked_house.MOV",
+        poster: "/videos/creator/the_crooked_house-poster.png",
+        format: "Storytelling",
+        language: "Spanish",
+        type: "Organic content",
+      },
+    ],
   },
   {
     industry: "Beauty & Wellness",
@@ -121,6 +135,9 @@ export const exampleSections: ExampleSection[] = [
         title: "ISDIN",
         src: "/videos/creator/isdin.mp4",
         poster: "/videos/creator/isdin-poster.jpg",
+        format: "Voiceover + product demo",
+        language: "Spanish",
+        type: "Product review",
       },
     ],
   },
@@ -131,7 +148,6 @@ export const creatorIntro = {
   subline:
     "Helping brands connect with real audience.",
   niches: ["Apps", "Lifestyle", "Travel", "Beauty & Wellness"],
-  // Quick facts shown in the hero. "00" is a placeholder: set your age.
   facts: [
     { label: "Age", value: "28" },
     { label: "Languages", value: "Spanish · English" },

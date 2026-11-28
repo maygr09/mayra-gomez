@@ -11,7 +11,12 @@ type VideoLoopProps = {
 // Phone-format (9:16), muted, looping clip. Plays only while on screen so
 // several videos on one page don't compete for bandwidth and CPU.
 export default function VideoLoop({ video }: VideoLoopProps) {
-  const { title, src, poster, href, platform } = video;
+  const { title, src, poster, href, platform, format, language, type } = video;
+  const specs = [
+    { label: "Format", value: format },
+    { label: "Language", value: language },
+    { label: "Type", value: type },
+  ].filter((spec) => spec.value);
   const ref = useRef<HTMLVideoElement>(null);
   const [muted, setMuted] = useState(true);
 
@@ -91,11 +96,31 @@ export default function VideoLoop({ video }: VideoLoopProps) {
         </div>
       </div>
 
-      {href && (
+      {(specs.length > 0 || href) && (
         <figcaption className="mt-3">
-          <ArrowLink href={href} external>
-            Watch on {platform ?? "platform"}
-          </ArrowLink>
+          {specs.length > 0 && (
+            <dl className="space-y-1 border-t border-foreground/10 pt-3">
+              {specs.map((spec) => (
+                <div
+                  key={spec.label}
+                  className="flex justify-between gap-3 text-xs"
+                >
+                  <dt className="uppercase tracking-[0.15em] text-lavender-600">
+                    {spec.label}
+                  </dt>
+                  <dd className="text-right text-foreground">{spec.value}</dd>
+                </div>
+              ))}
+            </dl>
+          )}
+
+          {href && (
+            <div className="mt-3">
+              <ArrowLink href={href} external>
+                Watch on {platform ?? "platform"}
+              </ArrowLink>
+            </div>
+          )}
         </figcaption>
       )}
     </figure>

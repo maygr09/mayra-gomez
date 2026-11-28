@@ -1,3 +1,6 @@
+"use client";
+
+import { usePathname } from "next/navigation";
 import Container from "@/components/layout/Container";
 
 // TODO: replace with real profile URLs
@@ -8,6 +11,9 @@ const footerLinks = [
 ];
 
 export default function Footer() {
+  // The Creator mini-site is its own space: no main-site footer there.
+  if (usePathname().startsWith("/creator")) return null;
+
   return (
     <footer
       id="contact"
